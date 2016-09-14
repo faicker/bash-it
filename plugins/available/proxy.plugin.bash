@@ -1,9 +1,9 @@
 cite about-plugin
 about-plugin 'Proxy Tools'
 
-disable-proxy ()
+bash-disable-proxy ()
 {
-	about 'Disables proxy settings for Bash, npm and SSH'
+	about 'Disables proxy settings for Bash'
 	group 'proxy'
 
 	unset http_proxy
@@ -14,15 +14,22 @@ disable-proxy ()
 	unset no_proxy
 	unset NO_PROXY
 	echo "Disabled proxy environment variables"
+}
 
+disable-proxy ()
+{
+	about 'Disables proxy settings for Bash, npm and SSH'
+	group 'proxy'
+
+    bash-disable-proxy
 	npm-disable-proxy
 	ssh-disable-proxy
 	svn-disable-proxy
 }
 
-enable-proxy ()
+bash-enable-proxy ()
 {
-	about 'Enables proxy settings for Bash, npm and SSH'
+	about 'Enables proxy settings for Bash'
 	group 'proxy'
 
 	export http_proxy=$BASH_IT_HTTP_PROXY
@@ -33,13 +40,20 @@ enable-proxy ()
 	export no_proxy=$BASH_IT_NO_PROXY
 	export NO_PROXY=$no_proxy
 	echo "Enabled proxy environment variables"
+}
 
+enable-proxy ()
+{
+	about 'Enables proxy settings for Bash, npm and SSH'
+	group 'proxy'
+
+    bash-enable-proxy
 	npm-enable-proxy
 	ssh-enable-proxy
 	svn-enable-proxy
 }
 
-enable-proxy-alt ()
+bash-enable-proxy-alt ()
 {
 	about 'Enables alternate proxy settings for Bash, npm and SSH'
 	group 'proxy'
@@ -52,7 +66,11 @@ enable-proxy-alt ()
 	export no_proxy=$BASH_IT_NO_PROXY
 	export NO_PROXY=$no_proxy
 	echo "Enabled alternate proxy environment variables"
+}
 
+enable-proxy-alt ()
+{
+    bash-enable-proxy-alt
 	npm-enable-proxy $http_proxy $https_proxy
 	ssh-enable-proxy
 	svn-enable-proxy $http_proxy
