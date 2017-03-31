@@ -19,6 +19,8 @@ function _set_pkg_aliases()
                 alias clb='curl -L -I'
                 # get stats
                 alias curls='curl -o /dev/null -s -w "local_ip: %{local_ip}\nlocal_port: %{local_port}\nremote_ip:%{remote_ip}\nremote_port:%{remote_port}\nhttp_code: %{http_code}\ntime_namelookup: %{time_namelookup}\ntime_connect: %{time_connect}\ntime_appconnect: %{time_appconnect}\ntime_pretransfer: %{time_pretransfer}\ntime_starttransfer: %{time_starttransfer}\ntime_total: %{time_total}\nsize_request(B): %{size_request}\nsize_download(B): %{size_download}\nspeed_download(Bps): %{speed_download}\n"'
+                # see only response headers from a get request
+                alias clhead='curl -D - -so /dev/null'
 	fi
 }
 

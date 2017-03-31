@@ -18,7 +18,7 @@ alias textedit='open -a TextEdit'
 alias hex='open -a "Hex Fiend"'
 alias skype='open -a Skype'
 alias mou='open -a Mou'
-alias subl='open -a Sublime\ Text --args'
+alias subl='open -a Sublime\ Text'
 alias macdown='open -a MacDown'
 
 if [ -s /usr/bin/firefox ] ; then
