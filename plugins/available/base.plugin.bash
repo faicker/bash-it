@@ -29,7 +29,7 @@ function myip ()
 {
     about 'displays your ip address, as seen by the Internet'
     group 'base'
-    res=$(curl -s checkip.dyndns.org | grep -Eo '[0-9\.]+')
+    res=$(curl -s myip.ipip.net | grep -Eo '[0-9\.]+')
     echo -e "Your public IP is: ${echo_bold_green} $res ${echo_normal}"
 }
 
