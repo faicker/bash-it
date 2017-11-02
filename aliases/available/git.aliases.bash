@@ -44,6 +44,8 @@ alias gb='git branch'
 alias gba='git branch -a'
 alias gbt='git branch --track'
 alias gbm='git branch -m'
+alias gbd='git branch -d'
+alias gbD='git branch -D'
 alias gcount='git shortlog -sn'
 alias gcp='git cherry-pick'
 alias gco='git checkout'
@@ -58,7 +60,7 @@ alias gll='git log --graph --pretty=oneline --abbrev-commit'
 alias gg="git log --graph --pretty=format:'%C(bold)%h%Creset%C(magenta)%d%Creset %s %C(yellow)<%an> %C(cyan)(%cr)%Creset' --abbrev-commit --date=relative"
 alias ggs="gg --stat"
 alias gsl="git shortlog -sn"
-alias gw="git whatchanged"
+alias gwc="git whatchanged"
 alias gt="git tag"
 alias gta="git tag -a"
 alias gtd="git tag -d"
